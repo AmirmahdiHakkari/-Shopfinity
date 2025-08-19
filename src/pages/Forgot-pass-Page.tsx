@@ -5,6 +5,7 @@ import clsx from "clsx";
 import { Link, useNavigate } from "react-router-dom";
 import type { ForgotPasswordType } from "../types";
 import { useTranslation } from "react-i18next";
+import { Helmet } from "react-helmet-async";
 
 const ForgotPassword = () => {
   const { theme } = useContext(ThemeContext);
@@ -55,108 +56,116 @@ const ForgotPassword = () => {
   }, [sent]);
 
   return (
-    <div
-      dir={dir()}
-      className={clsx(
-        "min-h-[837px] flex items-center justify-center px-4 transition",
-        isLight ? "bg-gray-100" : "bg-[#141a21]"
-      )}
-    >
+    <>
+      <Helmet>
+        <title>{t("pageTitle.forgot-Password")}</title>
+      </Helmet>
+
       <div
+        dir={dir()}
         className={clsx(
-          "rounded-xl shadow-lg w-full max-w-sm p-6",
-          isLight ? "bg-white" : "bg-[#1C252E]"
+          "min-h-[837px] flex items-center justify-center px-4 transition",
+          isLight ? "bg-gray-100" : "bg-[#141a21]"
         )}
       >
-        <h2
+        <div
           className={clsx(
-            "text-2xl font-bold mb-6 text-center",
-            isLight ? "text-gray-900" : "text-white"
+            "rounded-xl shadow-lg w-full max-w-sm p-6",
+            isLight ? "bg-white" : "bg-[#1C252E]"
           )}
         >
-          {t("Forgot-pass-Page-Header")}
-        </h2>
-
-        {sent ? (
-          <div
+          <h2
             className={clsx(
-              "text-center font-medium mb-6",
-              isLight ? "text-green-600" : "text-green-400"
+              "text-2xl font-bold mb-6 text-center",
+              isLight ? "text-gray-900" : "text-white"
             )}
           >
-            <p>{t("Forgot-pass-Page-Form-Submit")}</p>
-            {sent && (
-              <p className="mt-4">{t("Forgot-pass-Page-Form-Timer") + timer}</p>
-            )}
-          </div>
-        ) : (
-          <form className="space-y-5" onSubmit={handleSubmit(onSubmit)}>
-            <input
-              type="email"
-              placeholder={t("Forgot-pass-Page-Form-Email-place")}
-              className={clsx(
-                "w-full px-4 py-2 border rounded-lg transition font-semibold",
-                isLight
-                  ? "border-gray-300 text-gray-900 "
-                  : "border-gray-600 text-white bg-[#1C252E]",
-                {
-                  "bg-red-100 ring-2 ring-red-600 !text-gray-900 outline-none":
-                    errors.email && isLight,
-                  "bg-blue-900/80 ring-2 ring-blue-600 !text-white outline-none":
-                    errors.email && !isLight,
-                  "focus:ring-2 focus:ring-indigo-400 focus:outline-none":
-                    !errors.email,
-                }
-              )}
-              {...register("email", {
-                required: t("Forgot-pass-Page-Form-Email-required-error"),
-                pattern: {
-                  value: /^[^\s@]+@[^\s@]+\.[^\s@]+$/,
-                  message: t("Forgot-pass-Page-Form-Email-Invalid-error"),
-                },
-              })}
-            />
-            {errors.email && (
-              <p className="text-red-600 font-semibold">
-                {errors.email.message}
-              </p>
-            )}
+            {t("forgotPassPage.header")}
+          </h2>
 
-            <button
-              type="submit"
-              disabled={loading}
+          {sent ? (
+            <div
               className={clsx(
-                "w-full py-2 rounded-lg text-white font-medium transition cursor-pointer mt-5",
-                loading ? "bg-indigo-400" : "bg-indigo-600 hover:bg-indigo-700"
+                "text-center font-medium mb-6",
+                isLight ? "text-green-600" : "text-green-400"
               )}
             >
-              {loading
-                ? t("Forgot-pass-Page-Form-Sending")
-                : t("Forgot-pass-Page-Form-Send")}
-            </button>
-            {loading && (
-              <div className="flex justify-center mt-3">
-                <div className="w-6 h-6 border-4 border-indigo-600 border-dashed rounded-full animate-spin"></div>
-              </div>
-            )}
-          </form>
-        )}
+              <p>{t("forgotPassPage.form.submit")}</p>
+              {sent && (
+                <p className="mt-4">{t("forgotPassPage.form.timer") + timer}</p>
+              )}
+            </div>
+          ) : (
+            <form className="space-y-5" onSubmit={handleSubmit(onSubmit)}>
+              <input
+                type="email"
+                placeholder={t("forgotPassPage.form.emailPlace")}
+                className={clsx(
+                  "w-full px-4 py-2 border rounded-lg transition font-semibold",
+                  isLight
+                    ? "border-gray-300 text-gray-900 "
+                    : "border-gray-600 text-white bg-[#1C252E]",
+                  {
+                    "bg-red-100 ring-2 ring-red-600 !text-gray-900 outline-none":
+                      errors.email && isLight,
+                    "bg-blue-900/80 ring-2 ring-blue-600 !text-white outline-none":
+                      errors.email && !isLight,
+                    "focus:ring-2 focus:ring-indigo-400 focus:outline-none":
+                      !errors.email,
+                  }
+                )}
+                {...register("email", {
+                  required: t("forgotPassPage.form.emailRequiredError"),
+                  pattern: {
+                    value: /^[^\s@]+@[^\s@]+\.[^\s@]+$/,
+                    message: t("forgotPassPage.form.emailInvalidError"),
+                  },
+                })}
+              />
+              {errors.email && (
+                <p className="text-red-600 font-semibold">
+                  {errors.email.message}
+                </p>
+              )}
 
-        <div className="mt-6 text-center">
-          <Link
-            to="/login"
-            className={clsx(
-              "text-sm font-bold transition",
-              isLight
-                ? "text-indigo-600 hover:text-indigo-500"
-                : "text-indigo-500 hover:text-indigo-400"
-            )}
-          >
-            {t("Forgot-pass-Page-Form-Back")}
-          </Link>
+              <button
+                type="submit"
+                disabled={loading}
+                className={clsx(
+                  "w-full py-2 rounded-lg text-white font-medium transition cursor-pointer mt-5",
+                  loading
+                    ? "bg-indigo-400"
+                    : "bg-indigo-600 hover:bg-indigo-700"
+                )}
+              >
+                {loading
+                  ? t("forgotPassPage.form.sending")
+                  : t("forgotPassPage.form.send")}
+              </button>
+              {loading && (
+                <div className="flex justify-center mt-3">
+                  <div className="w-6 h-6 border-4 border-indigo-600 border-dashed rounded-full animate-spin"></div>
+                </div>
+              )}
+            </form>
+          )}
+
+          <div className="mt-6 text-center">
+            <Link
+              to="/login"
+              className={clsx(
+                "text-sm font-bold transition",
+                isLight
+                  ? "text-indigo-600 hover:text-indigo-500"
+                  : "text-indigo-500 hover:text-indigo-400"
+              )}
+            >
+              {t("forgotPassPage.form.back")}
+            </Link>
+          </div>
         </div>
       </div>
-    </div>
+    </>
   );
 };
 

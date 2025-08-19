@@ -2,15 +2,20 @@ import { useContext } from "react";
 import { ThemeContext } from "../context/Theme-Context";
 import clsx from "clsx";
 import { FaReact, FaCss3Alt, FaGithub, FaHtml5, FaJs } from "react-icons/fa";
+
 import {
   SiTypescript,
   SiTailwindcss,
   SiReactrouter,
   SiReacthookform,
   SiAxios,
+  SiRedux,
+  SiI18Next,
 } from "react-icons/si";
+
 import { MdOutlineSettingsEthernet } from "react-icons/md";
 import { useTranslation } from "react-i18next";
+import { Helmet } from "react-helmet-async";
 
 const AboutPage = () => {
   const { theme } = useContext(ThemeContext);
@@ -25,6 +30,8 @@ const AboutPage = () => {
     { name: "React", icon: <FaReact className="text-sky-500" /> },
     { name: "JavaScript", icon: <FaJs className="text-yellow-400" /> },
     { name: "TypeScript", icon: <SiTypescript className="text-blue-600" /> },
+    { name: "HTML5", icon: <FaHtml5 className="text-orange-500" /> },
+    { name: "CSS3", icon: <FaCss3Alt className="text-blue-500" /> },
     { name: "Tailwind CSS", icon: <SiTailwindcss className="text-sky-400" /> },
     { name: "React Router", icon: <SiReactrouter className="text-red-500" /> },
     {
@@ -36,59 +43,65 @@ const AboutPage = () => {
       name: "Context API",
       icon: <MdOutlineSettingsEthernet className="text-green-500" />,
     },
-    { name: "HTML5", icon: <FaHtml5 className="text-orange-500" /> },
-    { name: "CSS3", icon: <FaCss3Alt className="text-blue-500" /> },
+    { name: "Redux Toolkit", icon: <SiRedux className="text-purple-600" /> },
+    { name: "i18next", icon: <SiI18Next className="text-blue-500" /> },
     { name: "GitHub", icon: <FaGithub className="text-gray-700" /> },
   ];
 
   return (
-    <div
-      dir={dir()}
-      className={clsx(
-        "min-h-[837px] py-12 px-6",
-        isLight ? "bg-gray-100 text-gray-800" : "bg-[#141A21] text-gray-200"
-      )}
-    >
-      <div className="max-w-6xl mx-auto">
-        <h1 className="text-4xl font-bold mb-6 text-center">
-          {t("About-Page-Header")}
-        </h1>
-        <p
-          className={clsx(
-            "text-center mb-12 max-w-2xl mx-auto",
-            isLight ? "text-gray-700" : "text-gray-400"
-          )}
-        >
-          {t("About-Page-Description")}
-        </p>
-        <div className="grid gap-6 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
-          {techStack.map((tech, idx) => (
-            <div
-              key={idx}
-              className={clsx(
-                "flex flex-col items-center justify-center gap-3 p-6 rounded-xl shadow-md transition hover:scale-105 border",
-                isLight
-                  ? "bg-white border-gray-200"
-                  : "bg-[#1C252E] border-[#2A3645]"
-              )}
-            >
-              <div className="text-4xl">{tech.icon}</div>
-              <span className="font-semibold">{tech.name}</span>
-            </div>
-          ))}
-        </div>
-        <div className="mt-16 text-center">
+    <>
+      <Helmet>
+        <title>{t("pageTitle.about")}</title>
+      </Helmet>
+
+      <div
+        dir={dir()}
+        className={clsx(
+          "min-h-[837px] py-12 px-6",
+          isLight ? "bg-gray-100 text-gray-800" : "bg-[#141A21] text-gray-200"
+        )}
+      >
+        <div className="max-w-6xl mx-auto">
+          <h1 className="text-4xl font-bold mb-6 text-center">
+            {t("aboutPage.header")}
+          </h1>
           <p
             className={clsx(
-              "text-lg font-medium",
-              isLight ? "text-gray-700" : "text-gray-300"
+              "text-center mb-12 max-w-2xl mx-auto",
+              isLight ? "text-gray-700" : "text-gray-400"
             )}
           >
-            {t("About-Page-Subtitle")}
+            {t("aboutPage.description")}
           </p>
+          <div className="grid gap-6 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
+            {techStack.map((tech, idx) => (
+              <div
+                key={idx}
+                className={clsx(
+                  "flex flex-col items-center justify-center gap-3 p-6 rounded-xl shadow-md transition hover:scale-105 border",
+                  isLight
+                    ? "bg-white border-gray-200"
+                    : "bg-[#1C252E] border-[#2A3645]"
+                )}
+              >
+                <div className="text-4xl">{tech.icon}</div>
+                <span className="font-semibold">{tech.name}</span>
+              </div>
+            ))}
+          </div>
+          <div className="mt-16 text-center">
+            <p
+              className={clsx(
+                "text-lg font-medium",
+                isLight ? "text-gray-700" : "text-gray-300"
+              )}
+            >
+              {t("aboutPage.subtitle")}
+            </p>
+          </div>
         </div>
       </div>
-    </div>
+    </>
   );
 };
 

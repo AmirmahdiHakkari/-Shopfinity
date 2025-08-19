@@ -81,7 +81,7 @@ const ProductItem = ({ product }: ProductCardProps) => {
             className="w-full py-2.5 cursor-pointer bg-indigo-600 text-white rounded-lg font-medium hover:bg-indigo-800 transition-colors duration-300 flex items-center justify-center gap-2"
             onClick={() => dispatch(addToCart(product))}
           >
-            {t("Products-Add-To-Cart")}
+            {t("productsPage.addToCart")}
           </button>
         )}
       </div>

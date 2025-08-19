@@ -32,7 +32,7 @@ const Navbar = () => {
         isLight ? "bg-white text-gray-800" : "bg-[#1C252E] text-white"
       )}
     >
-      <div className="text-2xl font-bold">{t("Navbar-Header")}</div>
+      <div className="text-2xl font-bold">{t("navbar.header")}</div>
       <div className="hidden md:flex items-center gap-6">
         <NavLink
           to="/Products"
@@ -49,7 +49,7 @@ const Navbar = () => {
             )
           }
         >
-          {t("Navbar-Product")}
+          {t("navbar.product")}
         </NavLink>
         <NavLink
           to="/about"
@@ -66,7 +66,7 @@ const Navbar = () => {
             )
           }
         >
-          {t("Navbar-About")}
+          {t("navbar.about")}
         </NavLink>
         <NavLink
           to="/Contact"
@@ -83,7 +83,7 @@ const Navbar = () => {
             )
           }
         >
-          {t("Navbar-ContactUs")}
+          {t("navbar.contactUs")}
         </NavLink>
 
         <Link
@@ -103,8 +103,8 @@ const Navbar = () => {
           )}
         >
           {!localStorage.getItem("token")
-            ? t("Navbar-Login")
-            : t("Navbar-Logout")}
+            ? t("navbar.login")
+            : t("navbar.logout")}
         </Link>
 
         <div className="relative">
@@ -224,7 +224,6 @@ const Navbar = () => {
         </button>
       </div>
 
-      {/* منو موبایل */}
       <div className="md:hidden mt-3">
         <button onClick={() => setMenuOpen(!menuOpen)}>
           {menuOpen ? <FaTimes size={24} /> : <FaBars size={24} />}
@@ -252,7 +251,7 @@ const Navbar = () => {
                   isLight ? "text-neutral-500" : "text-neutral-400"
                 )}
               >
-                {t("Navbar-Pages")}
+                {t("navbar.pages")}
               </h4>
               <div className="h-5/6 flex flex-col justify-evenly">
                 <NavLink
@@ -271,7 +270,7 @@ const Navbar = () => {
                     )
                   }
                 >
-                  {t("Navbar-Product")}
+                  {t("navbar.product")}
                 </NavLink>
                 <NavLink
                   to="/about"
@@ -289,7 +288,7 @@ const Navbar = () => {
                     )
                   }
                 >
-                  {t("Navbar-About")}
+                  {t("navbar.about")}
                 </NavLink>
                 <NavLink
                   to="/Contact"
@@ -307,7 +306,7 @@ const Navbar = () => {
                     )
                   }
                 >
-                  {t("Navbar-ContactUs")}
+                  {t("navbar.contactUs")}
                 </NavLink>
               </div>
             </div>
@@ -324,8 +323,8 @@ const Navbar = () => {
               className="px-4 py-2.5 mt-6 rounded-lg bg-indigo-600 text-white hover:bg-indigo-700 transition text-center"
             >
               {!localStorage.getItem("token")
-                ? t("Navbar-Login")
-                : t("Navbar-Logout")}
+                ? t("navbar.login")
+                : t("navbar.logout")}
             </Link>
 
             <div className="mt-8 ">
@@ -335,7 +334,7 @@ const Navbar = () => {
                   isLight ? "text-neutral-500" : "text-neutral-400"
                 )}
               >
-                {t("Navbar-Languages")}
+                {t("navbar.languages")}
               </h4>
               {languages.map((l) => (
                 <button

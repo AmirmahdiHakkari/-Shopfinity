@@ -1,101 +1,137 @@
 export const fa = {
-  "Landing-Page-Header": "به فروشگاه من خوش آمدین",
-  "Landing-Page-Subheader": "برای دیدن محصولات وارد شوید",
-  "Landing-Page-LoginButton": "ورود",
-  "Landing-Page-LearnMoreButton": "بیشتر بدانید",
-  "Navbar-Header": "فروشگاه من",
-  "Navbar-Product": "محصولات",
-  "Navbar-About": "درباره ما",
-  "Navbar-ContactUs": "ارتباط با ما",
-  "Navbar-Login": "وارد",
-  "Navbar-Logout": "خروج",
-  "Navbar-Pages": "صفحات",
-  "Navbar-Languages": "زبان ها",
-  "About-Page-Header": "درباره این پروژه",
-  "About-Page-Description":
-    "این پروژه با فناوری‌های مدرن وب ساخته شده است تا سرعت، پاسخگویی و قابلیت نگهداری را تضمین کند. در ادامه می‌توانید ابزارها و فناوری‌هایی را که این امر را ممکن ساخته‌اند، مشاهده کنید.",
-  "About-Page-Subtitle": "🚀 ساخته شده با اشتیاق و جدیدترین فناوری‌های وب.",
-  "Contact-Page-Header": "ارتباط با ما",
-  "Contact-Page-Email": "ایمیل های ما",
-  "Contact-Page-Call": "با ما تماس بگیرید",
-  "Contact-Page-Visit": "از ما دیدن کنید",
-  "Contact-Page-Follow": "ما را دنبال کنید",
-  "Contact-Page-Form-Header": "برای ما پیام ارسال کنید",
-  "Contact-Page-Form-Name-place": "نام شما",
-  "Contact-Page-Form-Name-required-error": "نام الزامی است",
-  "Contact-Page-Form-Name-minLength-error": "نام باید حداقل ۳ کاراکتر باشد",
-  "Contact-Page-Form-Name-maxLength-error": "نام باید حداکثر ۳ کاراکتر باشد",
-  "Contact-Page-Form-Email-place": "آدرس ایمیل",
-  "Contact-Page-Form-Email-required-error": "ایمیل الزامی است",
-  "Contact-Page-Form-Email-Invalid-error": "آدرس ایمیل نامعتبر است",
-  "Contact-Page-Form-Subject-place": "موضوع",
-  "Contact-Page-Form-Subject-required-error": "موضوع الزامی است",
-  "Contact-Page-Form-Subject-minLength-error":
-    "موضوع باید حداقل ۳ کاراکتر باشد",
-  "Contact-Page-Form-Subject-maxLength-error":
-    "موضوع باید حداکثر ۱۵ کاراکتر باشد",
-  "Contact-Page-Form-Message-place": "پیام شما",
-  "Contact-Page-Form-Message-required-error": "پیام الزامی است",
-  "Contact-Page-Form-Message-minLength-error": "پیام باید حداقل ۵ کاراکتر باشد",
-  "Contact-Page-Form-Sending": "درحال ارسال...",
-  "Contact-Page-Form-Send": "ارسال پیام",
-  "Forgot-pass-Page-Header": "رمز عبورتان را فراموش کرده اید",
-  "Forgot-pass-Page-Form-Submit": "✅ لینک ریست ارسال شد.",
-  "Forgot-pass-Page-Form-Email-place": "ایمیل خود را وارد کنید",
-  "Forgot-pass-Page-Form-Email-required-error": "ایمیل الزامی است",
-  "Forgot-pass-Page-Form-Email-Invalid-error": "آدرس ایمیل نامعتبر است",
-  "Forgot-pass-Page-Form-Sending": "درحال ارسال...",
-  "Forgot-pass-Page-Form-Send": "ارسال پیام",
-  "Forgot-pass-Page-Form-Timer": "برگشت به صفحه ورود پس از ",
-  "Forgot-pass-Page-Form-Back": "بازگشت به صفحه ورود",
-  "Login-Page-Header": "وارد حساب کاربری خود شوید",
-  "Login-Page-Form-Username-place": "نام کاربری",
-  "Login-Page-Form-Username-required-error": "نام کاربری الزامی است",
-  "Login-Page-Form-Username-minLength-error":
-    "نام کاربری باید بیش از ۳ کاراکتر باشد.",
-  "Login-Page-Form-Username-maxLength-error":
-    "نام کاربری باید کمتر از ۱۵ کاراکتر باشد.",
-  "Login-Page-Form-Password-place": "رمز عبور",
-  "Login-Page-Form-Password-required-error": "رمز عبور الزامی است",
-  "Login-Page-Form-Password-minLength-error":
-    "رمز عبور باید بیش از ۳ کاراکتر باشد.",
-  "Login-Page-Form-Password-maxLength-error":
-    "رمز عبور باید کمتر از ۱۵ کاراکتر باشد.",
-  "Login-Page-Form-Forgot-Password": "رمز عبور را فراموش کرده اید؟",
-  "Login-Page-Form-Loading": "در حال بارگیری...",
-  "Login-Page-Form-Login": "ورود",
-  "Not-Access-Page-Header": "دسترسی ممنوع است",
-  "Not-Access-Page-Subheader": "خطای ۴۰۳ - ممنوع",
-  "Not-Access-Page-Description":
-    "متاسفیم، اما شما اجازه دسترسی به این صفحه را ندارید. لطفاً ابتدا وارد شوید و سپس دوباره امتحان کنید.",
-  "Not-Access-Page-Login": "ورود",
-  "Not-Access-Page-Contact": "با پشتیبانی تماس بگیرید",
-  "Not-Access-Page-Need-Help": "به کمک نیاز دارید؟ با ما تماس بگیرید از طریق",
-  "Products-Page-Filter-All": "همه",
-  "Products-Page-Filter-Beauty": "زیبایی",
-  "Products-Page-Filter-Fragrances": "عطرها",
-  "Products-Page-Filter-Furniture": "مبلمان",
-  "Products-Page-Filter-Groceries": "مواد غذایی",
-  "Products-Add-To-Cart": "🛒 افزودن به سبد خرید",
-  "basket-Page-Sidebar-Header": "سبدخرید",
-  "basket-Page-Sidebar-Checkout": "تسویه حساب",
-  "basket-Page-Sidebar-Total": "مجموع : ",
-  "basket-Page-Empty-Header": "سبد خرید شما خالی است",
-  "basket-Page-Empty-Subheader":
-    "به فروشگاه برو و محصولات مورد علاقه خودت را اضافه کن",
-  "checkout-Page-Order-Summary": "خلاصه سفارش",
-  "checkout-Page-Order-Registration": "ثبت سفارش",
-  "checkout-Page-Form-Header": "اطلاعات کاربر",
-  "checkout-Page-Form-Name": "نام و نام خانوادگی",
-  "checkout-Page-Form-Name-Required-Error": "نام الزامی است",
-  "checkout-Page-Form-Name-MinLength-Error": "نام باید بیش از ۳ کاراکتر باشد.",
-  "checkout-Page-Form-Name-MaxLength-Error":
-    "نام باید کمتر از 2۵ کاراکتر باشد.",
-  "checkout-Page-Form-Email": "ایمیل",
-  "checkout-Page-Form-Email-Required-Error": "ایمیل الزامی است",
-  "checkout-Page-Form-Email-Invalid-Error": "ایمیل نامعتبر است",
-  "checkout-Page-Form-Address": "آدرس",
-  "checkout-Page-Form-Address-Required-Error": "آدرس الزامی است",
-  "checkout-Page-Form-Address-MinLength-Error":
-    "آدرس باید بیش از ۳ کاراکتر باشد",
+  pageTitle: {
+    about: "درباره ما | Shopfinity",
+    basket: "سبد خرید | Shopfinity",
+    checkout: "تسویه حساب | Shopfinity",
+    contact: "تماس با ما | Shopfinity",
+    "forgot-Password": "فراموشی رمز عبور | Shopfinity",
+    landing: "صفحه اصلی | Shopfinity",
+    login: "ورود | Shopfinity",
+    products: "محصولات | Shopfinity",
+    "Not-Access": "دسترسی ندارید | Shopfinity",
+  },
+  landingPage: {
+    header: "به Shopfinity خوش آمدید",
+    subheader: "برای دیدن محصولات وارد شوید",
+    loginButton: "ورود",
+    learnMoreButton: "بیشتر بدانید",
+  },
+  navbar: {
+    header: "Shopfinity",
+    product: "محصولات",
+    about: "درباره ما",
+    contactUs: "ارتباط با ما",
+    login: "ورود",
+    logout: "خروج",
+    pages: "صفحات",
+    languages: "زبان‌ها",
+  },
+  aboutPage: {
+    header: "درباره این پروژه",
+    description:
+      "این پروژه با فناوری‌های مدرن وب ساخته شده است تا سرعت، پاسخگویی و قابلیت نگهداری را تضمین کند. در ادامه می‌توانید ابزارها و فناوری‌هایی را که این امر را ممکن ساخته‌اند، مشاهده کنید.",
+    subtitle: "🚀 ساخته شده با اشتیاق و جدیدترین فناوری‌های وب.",
+  },
+  contactPage: {
+    header: "ارتباط با ما",
+    email: "ایمیل‌های ما",
+    call: "با ما تماس بگیرید",
+    visit: "از ما دیدن کنید",
+    follow: "ما را دنبال کنید",
+    form: {
+      header: "برای ما پیام ارسال کنید",
+      namePlace: "نام شما",
+      nameRequiredError: "نام الزامی است",
+      nameMinLengthError: "نام باید حداقل ۳ کاراکتر باشد",
+      nameMaxLengthError: "نام باید حداکثر ۱۵ کاراکتر باشد",
+      emailPlace: "آدرس ایمیل",
+      emailRequiredError: "ایمیل الزامی است",
+      emailInvalidError: "آدرس ایمیل نامعتبر است",
+      subjectPlace: "موضوع",
+      subjectRequiredError: "موضوع الزامی است",
+      subjectMinLengthError: "موضوع باید حداقل ۳ کاراکتر باشد",
+      subjectMaxLengthError: "موضوع باید حداکثر ۱۵ کاراکتر باشد",
+      messagePlace: "پیام شما",
+      messageRequiredError: "پیام الزامی است",
+      messageMinLengthError: "پیام باید حداقل ۵ کاراکتر باشد",
+      sending: "درحال ارسال...",
+      send: "ارسال پیام",
+    },
+  },
+  forgotPassPage: {
+    header: "رمز عبور خود را فراموش کرده‌اید",
+    form: {
+      submit: "✅ لینک ریست ارسال شد.",
+      emailPlace: "ایمیل خود را وارد کنید",
+      emailRequiredError: "ایمیل الزامی است",
+      emailInvalidError: "آدرس ایمیل نامعتبر است",
+      sending: "درحال ارسال...",
+      send: "ارسال لینک ریست",
+      timer: "بازگشت به صفحه ورود پس از ",
+      back: "بازگشت به صفحه ورود",
+    },
+  },
+  loginPage: {
+    header: "وارد حساب کاربری خود شوید",
+    form: {
+      usernamePlace: "نام کاربری",
+      usernameRequiredError: "نام کاربری الزامی است",
+      usernameMinLengthError: "نام کاربری باید بیش از ۳ کاراکتر باشد.",
+      usernameMaxLengthError: "نام کاربری باید کمتر از ۱۵ کاراکتر باشد.",
+      passwordPlace: "رمز عبور",
+      passwordRequiredError: "رمز عبور الزامی است",
+      passwordMinLengthError: "رمز عبور باید بیش از ۳ کاراکتر باشد.",
+      passwordMaxLengthError: "رمز عبور باید کمتر از ۱۵ کاراکتر باشد.",
+      forgotPassword: "رمز عبور را فراموش کرده‌اید؟",
+      loading: "در حال بارگیری...",
+      login: "ورود",
+    },
+  },
+  notAccessPage: {
+    header: "دسترسی ممنوع است",
+    subheader: "خطای ۴۰۳ - ممنوع",
+    description:
+      "متاسفیم، اما شما اجازه دسترسی به این صفحه را ندارید. لطفاً ابتدا وارد شوید و سپس دوباره امتحان کنید.",
+    login: "ورود",
+    contact: "با پشتیبانی تماس بگیرید",
+    needHelp: "به کمک نیاز دارید؟ با ما تماس بگیرید از طریق",
+  },
+  productsPage: {
+    filter: {
+      all: "همه",
+      beauty: "زیبایی",
+      fragrances: "عطرها",
+      furniture: "مبلمان",
+      groceries: "مواد غذایی",
+    },
+    addToCart: "🛒 افزودن به سبد خرید",
+  },
+  basketPage: {
+    sidebar: {
+      header: "سبد خرید",
+      checkout: "تسویه حساب",
+      total: "مجموع : ",
+    },
+    empty: {
+      header: "سبد خرید شما خالی است",
+      subheader: "به فروشگاه بروید و محصولات مورد علاقه خود را اضافه کنید",
+    },
+  },
+  checkoutPage: {
+    orderSummary: "خلاصه سفارش",
+    orderRegistration: "ثبت سفارش",
+    form: {
+      header: "اطلاعات کاربر",
+      name: "نام و نام خانوادگی",
+      nameRequiredError: "نام الزامی است",
+      nameMinLengthError: "نام باید بیش از ۳ کاراکتر باشد.",
+      nameMaxLengthError: "نام باید کمتر از ۲۵ کاراکتر باشد.",
+      email: "ایمیل",
+      emailRequiredError: "ایمیل الزامی است",
+      emailInvalidError: "ایمیل نامعتبر است",
+      address: "آدرس",
+      addressRequiredError: "آدرس الزامی است",
+      addressMinLengthError: "آدرس باید بیش از ۳ کاراکتر باشد",
+    },
+  },
 };

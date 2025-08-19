@@ -6,6 +6,7 @@ import type { dataLoginType } from "../types";
 import { Link, useNavigate } from "react-router-dom";
 import { ThemeContext } from "../context/Theme-Context";
 import { useTranslation } from "react-i18next";
+import { Helmet } from "react-helmet-async";
 
 const Login = () => {
   const { theme } = useContext(ThemeContext);
@@ -41,122 +42,128 @@ const Login = () => {
   };
 
   return (
-    <div
-      dir={dir()}
-      className={clsx(
-        "max-w-screen min-h-[837px] flex items-center justify-center px-4 transition",
-        isLight ? "bg-gray-100" : "bg-[#141a21]"
-      )}
-    >
+    <>
+      <Helmet>
+        <title>{t("pageTitle.login")}</title>
+      </Helmet>
+
       <div
+        dir={dir()}
         className={clsx(
-          " rounded-xl shadow-lg w-full max-w-sm p-6",
-          isLight ? "bg-white" : "bg-[#1C252E]"
+          "max-w-screen min-h-[837px] flex items-center justify-center px-4 transition",
+          isLight ? "bg-gray-100" : "bg-[#141a21]"
         )}
       >
-        <h2
+        <div
           className={clsx(
-            "text-2xl font-bold mb-6 text-center",
-            isLight ? "text-gray-900" : "text-white"
+            " rounded-xl shadow-lg w-full max-w-sm p-6",
+            isLight ? "bg-white" : "bg-[#1C252E]"
           )}
         >
-          {t("Login-Page-Header")}
-        </h2>
-        <form className="space-y-5" onSubmit={handleSubmit(onSubmit)}>
-          <input
-            type="text"
-            placeholder={t("Login-Page-Form-Username-place")}
+          <h2
             className={clsx(
-              "w-full px-4 py-2 border rounded-lg transition font-semibold",
-              isLight
-                ? "border-gray-300 text-gray-900 "
-                : "border-gray-600 text-white bg-[#1C252E]",
-              {
-                "bg-red-100 ring-2 ring-red-600 !text-gray-900 outline-none":
-                  errors.username && isLight,
-                "bg-blue-900/80 ring-2 ring-blue-600 !text-white outline-none":
-                  errors.username && !isLight,
-                "focus:ring-2 focus:ring-indigo-400 focus:outline-none":
-                  !errors.username,
-              }
-            )}
-            {...register("username", {
-              required: t("Login-Page-Form-Username-required-error"),
-              minLength: {
-                value: 3,
-                message: t("Login-Page-Form-Username-minLength-error"),
-              },
-              maxLength: {
-                value: 15,
-                message: t("Login-Page-Form-Username-maxLength-error"),
-              },
-            })}
-          />
-          {errors.username && (
-            <h1 className="text-red-600 font-semibold">
-              {errors.username.message}
-            </h1>
-          )}
-          <input
-            type="password"
-            placeholder={t("Login-Page-Form-Password-place")}
-            className={clsx(
-              "w-full px-4 py-2 border rounded-lg transition font-semibold",
-              isLight
-                ? "border-gray-300 text-gray-900 "
-                : "border-gray-600 text-white bg-[#1C252E]",
-              {
-                "bg-red-100 ring-2 ring-red-600 !text-gray-900 outline-none":
-                  errors.password && isLight,
-                "bg-blue-900/80 ring-2 ring-blue-600 !text-white outline-none":
-                  errors.password && !isLight,
-                "focus:ring-2 focus:ring-indigo-400 focus:outline-none":
-                  !errors.password,
-              }
-            )}
-            {...register("password", {
-              required: t("Login-Page-Form-Password-required-error"),
-              minLength: {
-                value: 3,
-                message: t("Login-Page-Form-Password-minLength-error"),
-              },
-              maxLength: {
-                value: 15,
-                message: t("Login-Page-Form-Password-maxLength-error"),
-              },
-            })}
-          />
-          {errors.password && (
-            <h1 className="text-red-600 font-semibold">
-              {errors.password.message}
-            </h1>
-          )}
-          <Link
-            to="/forgot-password"
-            className="text-sm font-bold transition text-indigo-600 hover:text-indigo-500"
-          >
-            {t("Login-Page-Form-Forgot-Password")}
-          </Link>
-          <button
-            type="submit"
-            disabled={loading}
-            className={clsx(
-              "w-full py-2 rounded-lg text-white font-medium transition cursor-pointer mt-5",
-              loading ? "bg-indigo-400" : "bg-indigo-600 hover:bg-indigo-700"
+              "text-2xl font-bold mb-6 text-center",
+              isLight ? "text-gray-900" : "text-white"
             )}
           >
-            {loading
-              ? t("Login-Page-Form-Loading")
-              : t("Login-Page-Form-Login")}
-          </button>
-          {loading && (
-            <div className="flex justify-center mt-3">
-              <div className="w-6 h-6 border-4 border-indigo-600 border-dashed rounded-full animate-spin"></div>
-            </div>
-          )}
-        </form>
+            {t("loginPage.header")}
+          </h2>
+          <form className="space-y-5" onSubmit={handleSubmit(onSubmit)}>
+            <input
+              type="text"
+              placeholder={t("loginPage.form.usernamePlace")}
+              className={clsx(
+                "w-full px-4 py-2 border rounded-lg transition font-semibold",
+                isLight
+                  ? "border-gray-300 text-gray-900 "
+                  : "border-gray-600 text-white bg-[#1C252E]",
+                {
+                  "bg-red-100 ring-2 ring-red-600 !text-gray-900 outline-none":
+                    errors.username && isLight,
+                  "bg-blue-900/80 ring-2 ring-blue-600 !text-white outline-none":
+                    errors.username && !isLight,
+                  "focus:ring-2 focus:ring-indigo-400 focus:outline-none":
+                    !errors.username,
+                }
+              )}
+              {...register("username", {
+                required: t("loginPage.form.usernameRequiredError"),
+                minLength: {
+                  value: 3,
+                  message: t("loginPage.form.usernameMinLengthError"),
+                },
+                maxLength: {
+                  value: 15,
+                  message: t("loginPage.form.usernameMaxLengthError"),
+                },
+              })}
+            />
+            {errors.username && (
+              <h1 className="text-red-600 font-semibold">
+                {errors.username.message}
+              </h1>
+            )}
+            <input
+              type="password"
+              placeholder={t("loginPage.form.passwordPlace")}
+              className={clsx(
+                "w-full px-4 py-2 border rounded-lg transition font-semibold",
+                isLight
+                  ? "border-gray-300 text-gray-900 "
+                  : "border-gray-600 text-white bg-[#1C252E]",
+                {
+                  "bg-red-100 ring-2 ring-red-600 !text-gray-900 outline-none":
+                    errors.password && isLight,
+                  "bg-blue-900/80 ring-2 ring-blue-600 !text-white outline-none":
+                    errors.password && !isLight,
+                  "focus:ring-2 focus:ring-indigo-400 focus:outline-none":
+                    !errors.password,
+                }
+              )}
+              {...register("password", {
+                required: t("loginPage.form.passwordRequiredError"),
+                minLength: {
+                  value: 3,
+                  message: t("loginPage.form.passwordMinLengthError"),
+                },
+                maxLength: {
+                  value: 15,
+                  message: t("loginPage.form.passwordMaxLengthError"),
+                },
+              })}
+            />
+            {errors.password && (
+              <h1 className="text-red-600 font-semibold">
+                {errors.password.message}
+              </h1>
+            )}
+            <Link
+              to="/forgot-password"
+              className="text-sm font-bold transition text-indigo-600 hover:text-indigo-500"
+            >
+              {t("loginPage.form.forgotPassword")}
+            </Link>
+            <button
+              type="submit"
+              disabled={loading}
+              className={clsx(
+                "w-full py-2 rounded-lg text-white font-medium transition cursor-pointer mt-5",
+                loading ? "bg-indigo-400" : "bg-indigo-600 hover:bg-indigo-700"
+              )}
+            >
+              {loading
+                ? t("loginPage.form.loading")
+                : t("loginPage.form.login")}
+            </button>
+            {loading && (
+              <div className="flex justify-center mt-3">
+                <div className="w-6 h-6 border-4 border-indigo-600 border-dashed rounded-full animate-spin"></div>
+              </div>
+            )}
+          </form>
+        </div>
       </div>
-    </div>
+    </>
   );
 };
 export default Login;

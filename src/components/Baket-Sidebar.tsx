@@ -32,7 +32,7 @@ const BasketSideBar = () => {
       )}
     >
       <h1 className="text-2xl flex items-center mb-4">
-        {t("basket-Page-Sidebar-Header")}
+        {t("basketPage.sidebar.header")}
         <FaShoppingCart className="mr-2 w-6 h-6" />
       </h1>
 
@@ -49,10 +49,10 @@ const BasketSideBar = () => {
           >
             <FaShoppingCart className="w-12 h-12 mb-4 text-indigo-500" />
             <p className="text-lg font-semibold mb-2">
-              {t("basket-Page-Empty-Header")}
+              {t("basketPage.empty.header")}
             </p>
             <p className="text-sm text-center text-gray-400">
-              {t("basket-Page-Empty-Subheader")}
+              {t("basketPage.empty.subheader")}
             </p>
           </div>
         ) : (
@@ -73,13 +73,13 @@ const BasketSideBar = () => {
       {productsInCart.length > 0 && (
         <div className="mt-4 border-t pt-4">
           <p className="text-lg font-bold">
-            {t("basket-Page-Sidebar-Total")} ${totalPrice.toFixed(2)}
+            {t("basketPage.sidebar.total")} ${totalPrice.toFixed(2)}
           </p>
           <button
             className="w-full mt-2 py-2 rounded-lg font-semibold transition cursor-pointer bg-indigo-600 text-white hover:bg-indigo-700"
             onClick={() => navigate("/Checkout")}
           >
-            {t("basket-Page-Sidebar-Checkout")}
+            {t("basketPage.Sidebar.checkout")}
           </button>
         </div>
       )}
