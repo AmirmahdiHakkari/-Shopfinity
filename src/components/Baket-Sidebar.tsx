@@ -28,7 +28,7 @@ const BasketSideBar = () => {
       dir={dir()}
       className={clsx(
         "h-full w-full rounded-xl p-4 font-semibold transition shadow-sm flex flex-col",
-        isLight ? "bg-white text-gray-900" : "bg-[#1C252E] text-white"
+        isLight ? "bg-white text-gray-900" : "bg-secondaryDarkBg text-white"
       )}
     >
       <h1 className="text-2xl flex items-center mb-4">
@@ -44,7 +44,7 @@ const BasketSideBar = () => {
               "flex flex-col items-center justify-center p-6 rounded-xl border-2",
               isLight
                 ? "border-gray-300 bg-gray-50 text-gray-700"
-                : "border-gray-600 bg-[#1C252E] text-gray-300"
+                : "border-gray-600 bg-secondaryDarkBg text-gray-300"
             )}
           >
             <FaShoppingCart className="w-12 h-12 mb-4 text-indigo-500" />
@@ -79,7 +79,7 @@ const BasketSideBar = () => {
             className="w-full mt-2 py-2 rounded-lg font-semibold transition cursor-pointer bg-indigo-600 text-white hover:bg-indigo-700"
             onClick={() => navigate("/Checkout")}
           >
-            {t("basketPage.Sidebar.checkout")}
+            {t("basketPage.sidebar.checkout")}
           </button>
         </div>
       )}

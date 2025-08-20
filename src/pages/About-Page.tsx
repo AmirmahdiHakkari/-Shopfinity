@@ -57,8 +57,8 @@ const AboutPage = () => {
       <div
         dir={dir()}
         className={clsx(
-          "min-h-[837px] py-12 px-6",
-          isLight ? "bg-gray-100 text-gray-800" : "bg-[#141A21] text-gray-200"
+          "min-h-11/12 py-12 px-6",
+          isLight ? "bg-gray-100 text-gray-800" : "bg-darkBg text-gray-200"
         )}
       >
         <div className="max-w-6xl mx-auto">
@@ -81,23 +81,13 @@ const AboutPage = () => {
                   "flex flex-col items-center justify-center gap-3 p-6 rounded-xl shadow-md transition hover:scale-105 border",
                   isLight
                     ? "bg-white border-gray-200"
-                    : "bg-[#1C252E] border-[#2A3645]"
+                    : "bg-secondaryDarkBg border-gray-600"
                 )}
               >
                 <div className="text-4xl">{tech.icon}</div>
                 <span className="font-semibold">{tech.name}</span>
               </div>
             ))}
-          </div>
-          <div className="mt-16 text-center">
-            <p
-              className={clsx(
-                "text-lg font-medium",
-                isLight ? "text-gray-700" : "text-gray-300"
-              )}
-            >
-              {t("aboutPage.subtitle")}
-            </p>
           </div>
         </div>
       </div>

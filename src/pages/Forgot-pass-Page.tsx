@@ -64,14 +64,14 @@ const ForgotPassword = () => {
       <div
         dir={dir()}
         className={clsx(
-          "min-h-[837px] flex items-center justify-center px-4 transition",
-          isLight ? "bg-gray-100" : "bg-[#141a21]"
+          "min-h-11/12 flex items-center justify-center px-4 transition",
+          isLight ? "bg-gray-100" : "bg-darkBg"
         )}
       >
         <div
           className={clsx(
             "rounded-xl shadow-lg w-full max-w-sm p-6",
-            isLight ? "bg-white" : "bg-[#1C252E]"
+            isLight ? "bg-white" : "bg-secondaryDarkBg"
           )}
         >
           <h2
@@ -104,7 +104,7 @@ const ForgotPassword = () => {
                   "w-full px-4 py-2 border rounded-lg transition font-semibold",
                   isLight
                     ? "border-gray-300 text-gray-900 "
-                    : "border-gray-600 text-white bg-[#1C252E]",
+                    : "border-gray-600 text-white bg-secondaryDarkBg",
                   {
                     "bg-red-100 ring-2 ring-red-600 !text-gray-900 outline-none":
                       errors.email && isLight,

@@ -52,8 +52,8 @@ const ContactPage = () => {
       <div
         dir={dir()}
         className={clsx(
-          "max-w-screen min-h-[837px]",
-          isLight ? "bg-gray-100 text-gray-800" : "bg-[#141A21] text-gray-200"
+          "max-w-screen min-h-11/12",
+          isLight ? "bg-gray-100 text-gray-800" : "bg-darkBg text-gray-200"
         )}
       >
         <div
@@ -187,7 +187,7 @@ const ContactPage = () => {
                 "rounded-xl p-8 border shadow-lg",
                 isLight
                   ? "bg-white border-gray-200"
-                  : "bg-[#1C252E] border-[#2A3645]"
+                  : "bg-secondaryDarkBg border-[#2A3645]"
               )}
             >
               <h2 className="text-2xl font-bold mb-6">
@@ -201,7 +201,7 @@ const ContactPage = () => {
                     "w-full px-4 py-2 border rounded-lg transition font-semibold",
                     theme === "light"
                       ? "border-gray-300 text-gray-900"
-                      : "border-gray-600 text-white bg-[#1C252E]",
+                      : "border-gray-600 text-white bg-secondaryDarkBg",
                     {
                       "bg-red-100 ring-2 ring-red-600 !text-gray-900 outline-none":
                         errors.name && theme === "light",
@@ -236,7 +236,7 @@ const ContactPage = () => {
                     "w-full px-4 py-2 border rounded-lg transition font-semibold",
                     theme === "light"
                       ? "border-gray-300 text-gray-900"
-                      : "border-gray-600 text-white bg-[#1C252E]",
+                      : "border-gray-600 text-white bg-secondaryDarkBg",
                     {
                       "bg-red-100 ring-2 ring-red-600 !text-gray-900 outline-none":
                         errors.email && theme === "light",
@@ -267,7 +267,7 @@ const ContactPage = () => {
                     "w-full px-4 py-2 border rounded-lg transition font-semibold",
                     theme === "light"
                       ? "border-gray-300 text-gray-900"
-                      : "border-gray-600 text-white bg-[#1C252E]",
+                      : "border-gray-600 text-white bg-secondaryDarkBg",
                     {
                       "bg-red-100 ring-2 ring-red-600 !text-gray-900 outline-none":
                         errors.subject && theme === "light",
@@ -302,7 +302,7 @@ const ContactPage = () => {
                     "w-full px-4 py-2 border rounded-lg transition font-semibold resize-none",
                     theme === "light"
                       ? "border-gray-300 text-gray-900"
-                      : "border-gray-600 text-white bg-[#1C252E]",
+                      : "border-gray-600 text-white bg-secondaryDarkBg",
                     {
                       "bg-red-100 ring-2 ring-red-600 !text-gray-900 outline-none":
                         errors.message && theme === "light",

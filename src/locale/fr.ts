@@ -30,7 +30,6 @@ export const fr = {
     header: "À propos de ce projet",
     description:
       "Ce projet s'appuie sur des technologies web modernes pour garantir rapidité, réactivité et facilité de maintenance. Vous trouverez ci-dessous les outils et technologies qui ont permis sa réalisation.",
-    subtitle: "🚀 Construit avec passion et les dernières technologies Web.",
   },
   contactPage: {
     header: "Contactez nous",
@@ -76,12 +75,16 @@ export const fr = {
     form: {
       usernamePlace: "Nom d'utilisateur",
       usernameRequiredError: "le nom d'utilisateur est requis",
-      usernameMinLengthError: "Le nom d'utilisateur doit comporter plus de 3 caractères.",
-      usernameMaxLengthError: "Le nom d'utilisateur doit comporter moins de 15 caractères.",
+      usernameMinLengthError:
+        "Le nom d'utilisateur doit comporter plus de 3 caractères.",
+      usernameMaxLengthError:
+        "Le nom d'utilisateur doit comporter moins de 15 caractères.",
       passwordPlace: "Mot de passe",
       passwordRequiredError: "Le mot de passe est requis",
-      passwordMinLengthError: "Le mot de passe doit comporter plus de 3 caractères.",
-      passwordMaxLengthError: "Le mot de passe doit comporter moins de 15 caractères.",
+      passwordMinLengthError:
+        "Le mot de passe doit comporter plus de 3 caractères.",
+      passwordMaxLengthError:
+        "Le mot de passe doit comporter moins de 15 caractères.",
       forgotPassword: "Mot de passe oublié ?",
       loading: "Chargement...",
       login: "Se connecter",
@@ -133,5 +136,11 @@ export const fr = {
       addressRequiredError: "L'adresse est requise",
       addressMinLengthError: "L'adresse doit comporter au moins 3 caractères",
     },
+  },
+  notFoundPage: {
+    header: "Page introuvable",
+    description:
+      "Désolé, la page que vous recherchez n'existe pas ou a été déplacée.",
+    goHome: "Retour à l'accueil",
   },
 };

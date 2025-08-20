@@ -21,7 +21,7 @@ const ProductItem = ({ product }: ProductCardProps) => {
       key={product.id}
       className={clsx(
         "group rounded-xl shadow-sm hover:shadow-md transition-all duration-300 overflow-hidden hover:-translate-y-2 flex flex-col justify-between max-h-[550px]",
-        isLight ? "bg-white" : "bg-[#1C252E]"
+        isLight ? "bg-white" : "bg-secondaryDarkBg"
       )}
     >
       <div className="relative w-full aspect-square overflow-hidden">

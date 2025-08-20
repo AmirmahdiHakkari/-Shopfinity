@@ -26,7 +26,7 @@ const NotAccessPage = () => {
         dir={dir()}
         className={clsx(
           "min-h-screen flex flex-col items-center justify-center p-6",
-          isLight ? "bg-gray-100 text-gray-800" : "bg-[#141A21] text-gray-200"
+          isLight ? "bg-gray-100 text-gray-800" : "bg-darkBg text-gray-200"
         )}
       >
         <div
@@ -34,7 +34,7 @@ const NotAccessPage = () => {
             "max-w-md w-full rounded-xl shadow-2xl overflow-hidden border",
             isLight
               ? "bg-white border-gray-200"
-              : "bg-[#1C252E] border-[#2A3645]"
+              : "bg-secondaryDarkBg border-[#2A3645]"
           )}
         >
           <div

@@ -30,7 +30,6 @@ export const en = {
     header: "About This Project",
     description:
       "This project is built with modern web technologies to ensure speed,responsiveness, and maintainability. Below you can see the tools and technologies that made it possible.",
-    subtitle: "🚀 Built with passion and the latest web technologies.",
   },
   contactPage: {
     header: "Contact Us",
@@ -133,5 +132,11 @@ export const en = {
       addressRequiredError: "Address is required",
       addressMinLengthError: "Address must be at least 3 characters",
     },
+  },
+  notFoundPage: {
+    header: "Page Not Found",
+    description:
+      "Sorry, the page you are looking for doesn’t exist or has been moved.",
+    goHome: "Back to Home",
   },
 };

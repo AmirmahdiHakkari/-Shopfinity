@@ -64,7 +64,7 @@ const ProductsPage = () => {
     setCategories(uniqueCats);
 
     if (!uniqueCats.includes(selectedCategory)) {
-      setSelectedCategory(t("productsPage.filter.All"));
+      setSelectedCategory(t("productsPage.filter.all"));
     }
   }, [t]);
 
@@ -85,7 +85,7 @@ const ProductsPage = () => {
     return (
       <div
         className={`min-h-screen flex items-center justify-center ${
-          isLight ? "bg-gray-50" : "bg-[#141A21]"
+          isLight ? "bg-gray-50" : "bg-darkBg"
         }`}
       >
         <div className="w-24 h-24 border-4 border-indigo-600 border-dashed rounded-full animate-spin"></div>
@@ -102,8 +102,8 @@ const ProductsPage = () => {
       <div
         dir={dir()}
         className={clsx(
-          "min-h-screen transition",
-          isLight ? "from-gray-50 to-gray-100" : "bg-[#141A21]"
+          "min-h-11/12 transition",
+          isLight ? "bg-gray-100" : "bg-darkBg"
         )}
       >
         <div

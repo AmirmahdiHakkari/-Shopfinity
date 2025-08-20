@@ -10,6 +10,7 @@ import AboutPage from "./pages/About-Page";
 import ForgotPassword from "./pages/Forgot-pass-Page";
 import BasketPage from "./pages/Basket-Page";
 import CheckoutPage from "./pages/Checkout-Page";
+import NotFoundPage from "./pages/Not-Found-Page";
 
 export default function AppRoutes() {
   const location = useLocation();
@@ -31,6 +32,7 @@ export default function AppRoutes() {
         <Route path="/forgot-password" element={<ForgotPassword />} />
         <Route path="/Basket" element={<BasketPage />} />
         <Route path="/Checkout" element={<CheckoutPage />} />
+        <Route path="*" element={<NotFoundPage />} />
       </Routes>
     </>
   );

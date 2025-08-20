@@ -28,7 +28,7 @@ const BasketPage = () => {
         dir={dir()}
         className={clsx(
           "min-h-screen transition p-6 md:p-10 gap-6 grid grid-cols-1 md:grid-cols-[280px_1fr]",
-          isLight ? "bg-gray-50" : "bg-[#141A21]"
+          isLight ? "bg-gray-50" : "bg-darkBg"
         )}
       >
         <BasketSideBar />
@@ -43,7 +43,7 @@ const BasketPage = () => {
                 "col-span-full flex flex-col items-center justify-center p-10 rounded-xl",
                 isLight
                   ? "border-gray-300 bg-gray-50 text-gray-700"
-                  : "border-gray-600 bg-[#1C252E] text-gray-300"
+                  : "border-gray-600 bg-secondaryDarkBg text-gray-300"
               )}
             >
               <svg

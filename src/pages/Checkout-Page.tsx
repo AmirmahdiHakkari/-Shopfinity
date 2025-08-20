@@ -44,14 +44,14 @@ const CheckoutPage = () => {
       <div
         dir={dir()}
         className={clsx(
-          "p-6 md:p-10 grid gap-8 md:grid-cols-[1fr_2fr] transition min-h-[837px]",
-          isLight ? "bg-gray-50 text-gray-900" : "bg-[#141A21] text-white"
+          "p-6 md:p-10 grid gap-8 md:grid-cols-[1fr_2fr] transition min-h-11/12",
+          isLight ? "bg-gray-50 text-gray-900" : "bg-darkBg text-white"
         )}
       >
         <div
           className={clsx(
             "rounded-xl shadow-sm p-6 h-fit",
-            isLight ? "bg-white" : "bg-[#1C252E]"
+            isLight ? "bg-white" : "bg-secondaryDarkBg"
           )}
         >
           <h2 className="text-2xl font-bold mb-4">
@@ -73,7 +73,7 @@ const CheckoutPage = () => {
                 </div>
               ))}
               <div className="flex justify-between font-bold text-lg mt-4">
-                <span>{t("basket-Page-Sidebar-Total")}</span>
+                <span>{t("basketPage.sidebar.total")}</span>
                 <span>${totalPrice.toFixed(2)}</span>
               </div>
             </div>
@@ -83,7 +83,7 @@ const CheckoutPage = () => {
         <div
           className={clsx(
             "h-fit rounded-xl shadow-sm p-6",
-            isLight ? "bg-white" : "bg-[#1C252E]"
+            isLight ? "bg-white" : "bg-secondaryDarkBg"
           )}
         >
           <h2 className="text-2xl font-bold mb-4">
@@ -100,7 +100,7 @@ const CheckoutPage = () => {
                   "w-full px-4 py-2 border rounded-lg transition font-semibold",
                   isLight
                     ? "border-gray-300 text-gray-900 "
-                    : "border-gray-600 text-white bg-[#1C252E]",
+                    : "border-gray-600 text-white bg-secondaryDarkBg",
                   {
                     "bg-red-100 ring-2 ring-red-600 !text-gray-900 outline-none":
                       errors.Name && isLight,
@@ -137,8 +137,8 @@ const CheckoutPage = () => {
                 className={clsx(
                   "w-full px-4 py-2 border rounded-lg transition font-semibold",
                   isLight
-                    ? "border-gray-300 text-gray-900 "
-                    : "border-gray-600 text-white bg-[#1C252E]",
+                    ? "border-gray-300 text-gray-900"
+                    : "border-gray-600 text-white bg-secondaryDarkBg",
                   {
                     "bg-red-100 ring-2 ring-red-600 !text-gray-900 outline-none":
                       errors.Email && isLight,
@@ -172,7 +172,7 @@ const CheckoutPage = () => {
                   "w-full px-4 py-2 border rounded-lg transition font-semibold",
                   isLight
                     ? "border-gray-300 text-gray-900 "
-                    : "border-gray-600 text-white bg-[#1C252E]",
+                    : "border-gray-600 text-white bg-secondaryDarkBg",
                   {
                     "bg-red-100 ring-2 ring-red-600 !text-gray-900 outline-none":
                       errors.Address && isLight,

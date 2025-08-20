@@ -28,8 +28,8 @@ const Navbar = () => {
     <div
       dir={dir()}
       className={clsx(
-        "w-full p-4 flex items-center justify-between font-bold shadow ",
-        isLight ? "bg-white text-gray-800" : "bg-[#1C252E] text-white"
+        "w-full min-h-1/12 p-4 flex items-center justify-between font-bold shadow ",
+        isLight ? "bg-white text-gray-800" : "bg-secondaryDarkBg text-white"
       )}
     >
       <div className="text-2xl font-bold">{t("navbar.header")}</div>
@@ -234,7 +234,7 @@ const Navbar = () => {
             className={clsx(
               "absolute top-0 w-64 min-h-screen shadow-lg flex flex-col p-6 z-50 transition",
               dir() === "ltr" ? "left-0" : "right-0",
-              isLight ? "bg-white text-gray-800" : "bg-[#1C252E] text-white"
+              isLight ? "bg-white text-gray-800" : "bg-secondaryDarkBg text-white"
             )}
           >
             <button
