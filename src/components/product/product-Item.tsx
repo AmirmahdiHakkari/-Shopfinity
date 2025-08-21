@@ -1,10 +1,10 @@
 import { useContext } from "react";
-import { ThemeContext } from "../context/Theme-Context";
+import { ThemeContext } from "../../context/Theme-Context";
 import clsx from "clsx";
-import type { ProductCardProps, ProductType } from "../types";
+import type { ProductCardProps, ProductType } from "../../types";
 import { useDispatch, useSelector } from "react-redux";
-import type { RootState } from "../redux/store";
-import { addToCart, decreaseQuantity } from "../redux/cartSlice";
+import type { RootState } from "../../redux/store";
+import { addToCart, decreaseQuantity } from "../../redux/cartSlice";
 import { t } from "i18next";
 
 const ProductItem = ({ product }: ProductCardProps) => {

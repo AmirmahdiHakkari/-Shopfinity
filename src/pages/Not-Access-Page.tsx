@@ -1,11 +1,10 @@
-import { Link } from "react-router-dom";
-import { FaLock, FaEnvelope } from "react-icons/fa";
-import { LuLogIn } from "react-icons/lu";
+import { FaLock } from "react-icons/fa";
 import { useContext } from "react";
 import { ThemeContext } from "../context/Theme-Context";
 import clsx from "clsx";
 import { useTranslation } from "react-i18next";
 import { Helmet } from "react-helmet-async";
+import NotAccessButtons from "../components/not access/NotAccessButtons";
 
 const NotAccessPage = () => {
   const { theme } = useContext(ThemeContext);
@@ -73,34 +72,7 @@ const NotAccessPage = () => {
               <p className={clsx(isLight ? "text-gray-700" : "text-gray-300")}>
                 {t("notAccessPage.description")}
               </p>
-
-              <div className="pt-6 flex flex-col sm:flex-row gap-4">
-                <Link
-                  to="/Login"
-                  className={clsx(
-                    "flex items-center justify-center gap-2 px-6 py-3 rounded-lg transition-all text-white",
-                    isLight
-                      ? "bg-blue-500 hover:bg-blue-600"
-                      : "bg-[#2962FF] hover:bg-[#2979FF]"
-                  )}
-                >
-                  <LuLogIn />
-                  {t("notAccessPage.login")}
-                </Link>
-
-                <Link
-                  to="/contact"
-                  className={clsx(
-                    "flex items-center justify-center gap-2 px-6 py-3 rounded-lg transition-all",
-                    isLight
-                      ? "border border-gray-300 text-gray-700 hover:bg-gray-200"
-                      : "border border-[#2A3645] text-gray-300 hover:bg-[#2A3645]"
-                  )}
-                >
-                  <FaEnvelope />
-                  {t("notAccessPage.contact")}
-                </Link>
-              </div>
+              <NotAccessButtons />
             </div>
           </div>
         </div>

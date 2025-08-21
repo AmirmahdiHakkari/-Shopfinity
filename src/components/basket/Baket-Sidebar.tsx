@@ -1,9 +1,9 @@
 import clsx from "clsx";
 import { useContext } from "react";
-import { ThemeContext } from "../context/Theme-Context";
+import { ThemeContext } from "../../context/Theme-Context";
 import { FaShoppingCart } from "react-icons/fa";
 import { useSelector } from "react-redux";
-import type { RootState } from "../redux/store";
+import type { RootState } from "../../redux/store";
 import { useTranslation } from "react-i18next";
 import { useNavigate } from "react-router-dom";
 

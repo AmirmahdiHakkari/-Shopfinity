@@ -1,3 +1,5 @@
+import type { JSX } from "react";
+
 export type Props = {
   children: React.ReactNode;
 };
@@ -41,4 +43,17 @@ export type CheckoutFormType = {
   Address: string;
   Email: string;
   Name: string;
+};
+
+export type TechItemProps = {
+  tech: {
+    name: string;
+    icon: JSX.Element;
+  };
+};
+
+export type FilterNavProps = {
+  categories: string[];
+  setSelectedCategory: React.Dispatch<React.SetStateAction<string>>;
+  selectedCategory: string;
 };

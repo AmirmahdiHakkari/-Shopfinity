@@ -9,6 +9,7 @@ export const en = {
     login: "Login | Shopfinity",
     products: "Products | Shopfinity",
     "Not-Access": "Not Access | Shopfinity",
+    notFound: "Not Found | Shopfinity",
   },
   landingPage: {
     header: "Welcome to Shopfinity",

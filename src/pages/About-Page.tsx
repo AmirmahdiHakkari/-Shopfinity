@@ -16,6 +16,7 @@ import {
 import { MdOutlineSettingsEthernet } from "react-icons/md";
 import { useTranslation } from "react-i18next";
 import { Helmet } from "react-helmet-async";
+import TechItem from "../components/about/Tech-item";
 
 const AboutPage = () => {
   const { theme } = useContext(ThemeContext);
@@ -74,19 +75,8 @@ const AboutPage = () => {
             {t("aboutPage.description")}
           </p>
           <div className="grid gap-6 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
-            {techStack.map((tech, idx) => (
-              <div
-                key={idx}
-                className={clsx(
-                  "flex flex-col items-center justify-center gap-3 p-6 rounded-xl shadow-md transition hover:scale-105 border",
-                  isLight
-                    ? "bg-white border-gray-200"
-                    : "bg-secondaryDarkBg border-gray-600"
-                )}
-              >
-                <div className="text-4xl">{tech.icon}</div>
-                <span className="font-semibold">{tech.name}</span>
-              </div>
+            {techStack.map((tech, index) => (
+              <TechItem key={index} tech={tech} />
             ))}
           </div>
         </div>

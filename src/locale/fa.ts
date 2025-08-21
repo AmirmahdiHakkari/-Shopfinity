@@ -9,6 +9,7 @@ export const fa = {
     login: "ورود | Shopfinity",
     products: "محصولات | Shopfinity",
     "Not-Access": "دسترسی ندارید | Shopfinity",
+    notFound: "صفحه ای یافت نشد | Shopfinity",
   },
   landingPage: {
     header: "به Shopfinity خوش آمدید",
