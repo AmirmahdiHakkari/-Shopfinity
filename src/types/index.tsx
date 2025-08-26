@@ -17,6 +17,8 @@ export type ProductType = {
   category: string;
   description: string;
   quantity: number;
+  images?: string[];
+  stock?: string;
 };
 
 export type ProductCardProps = {
@@ -56,4 +58,37 @@ export type FilterNavProps = {
   categories: string[];
   setSelectedCategory: React.Dispatch<React.SetStateAction<string>>;
   selectedCategory: string;
+};
+
+export type DashboardSidebarButtonType = {
+  to: string;
+  content: string;
+  isActiveOverride?: (pathname: string) => boolean;
+};
+
+export type AppWidgetSummaryProps = {
+  header: string;
+  subheader: string;
+  data: number[];
+  cartColor: string;
+};
+
+export type BarChartProps = {
+  data: number[];
+  categories?: string[];
+  color?: string;
+};
+
+export type MultiLayerDonutChartType = {
+  data: number[];
+  labels: string[];
+  colors?: string[];
+};
+
+export type FormValues = {
+  title: string;
+  category: string;
+  price: number;
+  stock: number;
+  description: string;
 };

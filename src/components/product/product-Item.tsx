@@ -4,12 +4,13 @@ import clsx from "clsx";
 import type { ProductCardProps, ProductType } from "../../types";
 import { useDispatch, useSelector } from "react-redux";
 import type { RootState } from "../../redux/store";
-import { addToCart, decreaseQuantity } from "../../redux/cartSlice";
 import { t } from "i18next";
+import { addToCart, decreaseQuantity } from "../../redux/cart/cartSlice";
 
 const ProductItem = ({ product }: ProductCardProps) => {
   const { theme } = useContext(ThemeContext);
   const isLight = theme === "light";
+  
   const dispatch = useDispatch();
 
   const basketItem = useSelector((state: RootState) =>

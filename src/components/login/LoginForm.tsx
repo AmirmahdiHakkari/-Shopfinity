@@ -29,7 +29,7 @@ const LoginForm = () => {
     try {
       const res = await axios.post("https://dummyjson.com/auth/login", data);
       localStorage.setItem("token", JSON.stringify(res.data.accessToken));
-      navigate("/Products");
+      navigate("/dashboard/overview");
     } catch (err) {
       console.error(err);
     } finally {
