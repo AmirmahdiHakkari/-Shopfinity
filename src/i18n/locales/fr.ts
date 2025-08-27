@@ -26,6 +26,9 @@ export const fr = {
     logout: "Déconnexion",
     pages: "Pages",
     languages: "Langues",
+    toast: {
+      loggedOut: "Vous êtes déconnecté",
+    },
   },
   aboutPage: {
     header: "À propos de ce projet",
@@ -89,6 +92,14 @@ export const fr = {
       forgotPassword: "Mot de passe oublié ?",
       loading: "Chargement...",
       login: "Se connecter",
+      demo: {
+        header: "Nom d'utilisateur et mot de passe de démonstration",
+        userName: "nom d'utilisateur : ",
+        password: "mot de passe : ",
+      },
+      toast: {
+        loggedIn: "Vous êtes connecté",
+      },
     },
   },
   productsPage: {

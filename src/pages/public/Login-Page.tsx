@@ -40,5 +40,3 @@ const Login = () => {
   );
 };
 export default Login;
-// 'emilys'
-// 'emilyspass'

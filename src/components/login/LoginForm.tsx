@@ -6,14 +6,20 @@ import { useForm } from "react-hook-form";
 import type { dataLoginType } from "../../types";
 import { Link, useNavigate } from "react-router-dom";
 import axios from "axios";
+import { toast } from "react-toastify";
 
 const LoginForm = () => {
   const { theme } = useContext(ThemeContext);
   const isLight = theme === "light";
 
-  const { t } = useTranslation();
-
   const navigate = useNavigate();
+
+  const {
+    i18n: { dir },
+    t,
+  } = useTranslation();
+
+  const isLTR = dir() === "ltr";
 
   const [loading, setLoading] = useState(false);
 
@@ -29,12 +35,19 @@ const LoginForm = () => {
     try {
       const res = await axios.post("https://dummyjson.com/auth/login", data);
       localStorage.setItem("token", JSON.stringify(res.data.accessToken));
-      navigate("/dashboard/overview");
     } catch (err) {
       console.error(err);
     } finally {
       setLoading(false);
       reset();
+      toast.success(t("loginPage.form.toast.loggedIn"), {
+        position: isLTR ? "top-right" : "top-left",
+        style: {
+          background: isLight ? "#f9fafb" : "#1C252E",
+          color: isLight ? "#000000" : "#ffffff",
+        },
+      });
+      navigate("/dashboard/overview");
     }
   };
 
@@ -48,6 +61,13 @@ const LoginForm = () => {
       >
         {t("loginPage.header")}
       </h2>
+
+      <div className="bg-indigo-400 text-white font-bold py-2 px-4 rounded-xl mb-6">
+        {t("loginPage.form.demo.header")} <br />
+        <span>{t("loginPage.form.demo.userName")}emilys</span> <br />
+        <span>{t("loginPage.form.demo.password")}emilyspass</span>
+      </div>
+
       <form className="space-y-5" onSubmit={handleSubmit(onSubmit)}>
         <input
           type="text"

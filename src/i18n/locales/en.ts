@@ -33,6 +33,9 @@ export const en = {
     pages: "Pages",
     languages: "Languages",
     dashboard: "Dashboard",
+    toast: {
+      loggedOut: "You are logged out",
+    },
   },
   aboutPage: {
     header: "About This Project",
@@ -92,6 +95,14 @@ export const en = {
       forgotPassword: "Forgot password?",
       loading: "Loading...",
       login: "Login",
+      demo: {
+        header: "Demo userName and password",
+        userName:"userName : ",
+        password:"password : "
+      },
+      toast: {
+        loggedIn: "You are logged in",
+      },
     },
   },
   productsPage: {

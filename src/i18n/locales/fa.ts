@@ -33,6 +33,9 @@ export const fa = {
     pages: "صفحات",
     languages: "زبان‌ها",
     dashboard: "داشبرد",
+    toast: {
+      loggedOut: "شما از سیستم خارج شده‌اید",
+    },
   },
   aboutPage: {
     header: "درباره این پروژه",
@@ -92,6 +95,14 @@ export const fa = {
       forgotPassword: "رمز عبور را فراموش کرده‌اید؟",
       loading: "در حال بارگیری...",
       login: "ورود",
+      demo: {
+        header: "نام کاربری و رمز عبور آزمایشی",
+        userName: "نام کاربری : ",
+        password: "رمز عبور : ",
+      },
+      toast: {
+        loggedIn: "شما وارد شده اید",
+      },
     },
   },
   productsPage: {

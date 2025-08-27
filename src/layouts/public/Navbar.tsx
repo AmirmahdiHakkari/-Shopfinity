@@ -111,10 +111,16 @@ const Navbar = () => {
 
         <Link
           to="/login"
-          onClick={(e) => {
+          onClick={() => {
             if (localStorage.getItem("token")) {
-              e.preventDefault();
               localStorage.removeItem("token");
+              toast.success(t("navbar.toast.loggedOut"), {
+                position: isLTR ? "top-right" : "top-left",
+                style: {
+                  background: isLight ? "#f9fafb" : "#1C252E",
+                  color: isLight ? "#000000" : "#ffffff",
+                },
+              });
             }
           }}
           className={clsx(
@@ -345,16 +351,19 @@ const Navbar = () => {
               </div>
             </div>
             <Link
-              to={localStorage.getItem("token") ? "#" : "/login"}
-              onClick={(e) => {
+              to={"/login"}
+              onClick={() => {
                 if (localStorage.getItem("token")) {
-                  e.preventDefault();
                   localStorage.removeItem("token");
-                  window.location.href = "/";
                 }
                 setMenuOpen(false);
               }}
-              className="px-4 py-2.5 mt-6 rounded-lg bg-indigo-600 text-white hover:bg-indigo-700 transition text-center"
+              className={clsx(
+                "px-4 py-2.5 mt-6 rounded-lg text-white transition text-center",
+                localStorage.getItem("token")
+                  ? "bg-red-600 hover:bg-red-700"
+                  : "bg-indigo-600 hover:bg-indigo-700"
+              )}
             >
               {!localStorage.getItem("token")
                 ? t("navbar.login")
@@ -376,6 +385,16 @@ const Navbar = () => {
                   onClick={() => {
                     changeLanguage(l.code);
                     setMenuOpen(false);
+                    toast.success(
+                      t("dashboard.toast.languageChanged", { lang: l.label }),
+                      {
+                        position: isLTR ? "top-right" : "top-left",
+                        style: {
+                          background: isLight ? "#f9fafb" : "#1C252E",
+                          color: isLight ? "#000000" : "#ffffff",
+                        },
+                      }
+                    );
                   }}
                   className="flex items-center gap-2 px-4 py-2 w-full transition hover:bg-indigo-600 hover:text-white rounded"
                 >
